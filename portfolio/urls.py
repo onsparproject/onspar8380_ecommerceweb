@@ -24,7 +24,8 @@ urlpatterns = [
     url(r'^employee/(?P<pk>\d+)/edit/$', views.employee_edit, name='employee_edit'),
     url(r'^employee/create/$', views.employee_new, name='employee_new'),
     url(r'^account_settings_list/$', views.account_settings_list, name='account_settings_list'),
-
+    url(r'^register/$', views.register, name='register'),
+    url(r'^account/register/$', views.register, name='register'),
     # previous login view
     # url(r'^login/$', views.user_login, name='login'),
 
