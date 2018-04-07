@@ -84,8 +84,12 @@ WSGI_APPLICATION = 'onspar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'daed0bm40b680d',
+        'USER': 'zcgjcaijwafsjg',
+        'PASSWORD': '794c752de007ad2df611519f26d405705dd4920b610febc4aa63da8c707f18a2',
+        'HOST': 'ec2-107-21-126-193.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -141,8 +145,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-DATABASES['default'] = dj_database_url.config(default='postgres://nqnjxsywzvnskt:a298d6f4992deac7df3bfbe1ad1b1243f4bfd034fe830d234f93c545df1b4daa@ec2-174-129-193-169.compute-1.amazonaws.com:5432/d44082qakjqosj')
-
+DATABASES['default'] = dj_database_url.config(default='postgres://zcgjcaijwafsjg:794c752de007ad2df611519f26d405705dd4920b610febc4aa63da8c707f18a2@ec2-107-21-126-193.compute-1.amazonaws.com:5432/daed0bm40b680d'
+''
 try:
     from .local_settings import *
 except ImportError:
